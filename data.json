@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Realismo",
+    "description": "Tatuagem estilo oriental, detalhes finos.",
+    "image": "https://picsum.photos/id/1025/1200/900",
+    "thumb": "https://picsum.photos/id/1025/600/400"
+  },
+  {
+    "id": 2,
+    "title": "Fineline",
+    "description": "Tatuagem delicada em fineline, traços precisos e elegantes.",
+    "image": "https://picsum.photos/id/1060/1200/900",
+    "thumb": "https://picsum.photos/id/1060/600/400"
+  },
+  {
+    "id": 3,
+    "title": "Old School",
+    "description": "Estilo tradicional com cores vibrantes e contornos grossos.",
+    "image": "https://picsum.photos/id/1076/1200/900",
+    "thumb": "https://picsum.photos/id/1076/600/400"
+  },
+  {
+    "id": 4,
+    "title": "Aquarela",
+    "description": "Cores fluidas e vibrantes que imitam a técnica de aquarela.",
+    "image": "https://picsum.photos/id/1018/1200/900",
+    "thumb": "https://picsum.photos/id/1018/600/400"
+  },
+  {
+    "id": 5,
+    "title": "Pontilismo",
+    "description": "Arte tribal e geométrica usando apenas tinta preta sólida.",
+    "image": "https://picsum.photos/id/103/1200/900",
+    "thumb": "https://picsum.photos/id/103/600/400"
+  }
+]

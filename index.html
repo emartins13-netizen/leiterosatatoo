@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte na Pele</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="left-sidebar">
+        <section id="gallery" class="gallery">
+            <h2>Galeria</h2>
+            <div class="grid" id="galleryGrid">
+                <!-- gallery items inserted here by script.js -->
+            </div>
+        </section>
+    </aside>
+    <div class="main-content-wrapper">
+        <header>
+            <img id="logo" src="logo.jpg" alt="Logo Arte na Pele">
+            <h1>Arte na Pele</h1>
+        </header>
+        <main>
+            <nav class="location-nav">
+                <ul>
+                    <li>
+                        <span>São Paulo</span>
+                        <ul class="dropdown">
+                            <li><a href="#">São Paulo</a></li>
+                            <li><a href="#">Campinas</a></li>
+                            <li><a href="#">Santos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Rio de Janeiro</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Rio de Janeiro</a></li>
+                            <li><a href="#">Niterói</a></li>
+                            <li><a href="#">Petrópolis</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Santa Catarina</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Florianópolis</a></li>
+                            <li><a href="#">Joinville</a></li>
+                            <li><a href="#">Blumenau</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Pernambuco</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Recife</a></li>
+                            <li><a href="#">Olinda</a></li>
+                            <li><a href="#">Porto de Galinhas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <footer>
+            <div id="calendar-container">
+                <div id="calendar">
+                    <div class="calendar-header">
+                        <button id="prev-month-btn">&lt;</button>
+                        <h3 id="month-year"></h3>
+                        <button id="next-month-btn">&gt;</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                    </div>
+                    <div id="calendar-days" class="calendar-days"></div>
+                </div>
+                <div id="agenda-container">
+                    <h4 id="agenda-title">Selecione um dia disponível</h4>
+                    <div id="agenda-slots"></div>
+                </div>
+            </div>
+            <p><a href="https://www.instagram.com/leiterosatattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Siga-nos no Instagram</a></p>
+        </footer>
+    </div>
+    <aside class="right-sidebar">
+        <nav class="side-menu">
+            <h3>Dicas e Cuidados</h3>
+            <ul>
+                <li><a href="#">Cuidados Pré</a></li>
+                <li><a href="#">Cuidados Pós</a></li>
+                <li><a href="#">Escolha da Arte</a></li>
+                <li><a href="#">Partes do corpo</a></li>
+                <li><a href="#">Retoques</a></li>
+                <li><a href="#">Coberturas</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+        <img id="lightboxImage" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

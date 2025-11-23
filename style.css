@@ -1,0 +1,361 @@
+/* Main page styles moved from index.html */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    display: flex; /* Alterado para flex */
+    min-height: 200vh;
+}
+
+.main-content-wrapper {
+    flex: 1; /* Ocupa o espaço principal */
+    margin-left: 260px; /* Adiciona espaço para a barra lateral esquerda */
+    margin-right: 240px; /* Adiciona espaço para a barra lateral direita */
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: #000000;
+    font-family: 'Edwardian Script ITC', cursive;
+    text-align: center;
+    padding: 0.98em 0;
+    font-size: 20px;
+}
+header h1 {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Estilos do Menu de Navegação de Localidades */
+.location-nav {
+    font-family: 'Calibri', sans-serif;
+    margin-bottom: 2em; /* Adiciona espaço abaixo do menu */
+}
+
+.location-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.location-nav > ul > li {
+    position: relative; /* Necessário para posicionar o dropdown */
+    margin: 0 20px;
+    padding: 10px 0;
+}
+
+.location-nav > ul > li > span {
+    color: #FFFFFF;
+    cursor: default; /* O cursor não muda pois não é um link */
+    font-size: 1.1em;
+}
+
+/* Estilos do Menu Dropdown (Cidades) */
+.dropdown {
+    display: none; /* Esconde o dropdown por padrão */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(20, 20, 20, 0.7);
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 180px; /* Largura do menu suspenso */
+    z-index: 120; /* Garante que fique sobre outros elementos */
+    flex-direction: column;
+}
+
+.location-nav > ul > li:hover .dropdown {
+    display: flex; /* Mostra o dropdown ao passar o mouse no item do estado */
+}
+
+.dropdown li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+}
+.dropdown li a:hover { background-color: #333; color: #fff; }
+
+main {
+    font-family: 'Calibri', sans-serif;
+    flex-grow: 1; /* Garante que o main ocupe o espaço vertical */
+    padding: 1rem;
+    background-image: url('dragão.jpg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.card figcaption {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+footer {
+    font-family: 'Calibri', sans-serif;
+    text-align: center;
+    padding: 1.5em 0;
+}
+footer a { color: #FFFFFF; text-decoration: none; }
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    padding: 1rem;
+}
+.lightbox[aria-hidden="false"] { display: flex; }
+.lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+}
+.lightbox-caption {
+    color: #ddd;
+    margin-top: 0.6rem;
+    text-align: center;
+    max-width: 900px;
+}
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .card img { height: 150px; }
+}
+
+/* Estilo para imagem de logo circular */
+.logo {
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+}
+
+/* Estilos do Calendário no Footer */
+#calendar-container {
+    max-width: 320px;
+    margin: 0 auto 2em; /* Centraliza e adiciona espaço abaixo */
+    font-family: 'Calibri', sans-serif;
+    background-color: rgba(200, 200, 200, 0.3); /* Fundo cinza claro com 70% de transparência */
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 1.5em; /* Espaçamento interno */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.calendar-header h3 {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    color: #eee;
+}
+
+.calendar-header button {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.calendar-header button:hover {
+    background-color: #333;
+}
+
+.calendar-weekdays, .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.calendar-days div {
+    padding: 5px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s;
+}
+
+.calendar-days div:hover:not(.empty) {
+    background-color: #333;
+}
+
+.calendar-days .today {
+    background-color: #a00;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-days .empty {
+    cursor: default;
+}
+
+.calendar-days .available {
+    font-weight: bold;
+    border: 1px solid #4CAF50; /* Borda verde para indicar disponibilidade */
+}
+
+.calendar-days .available:hover {
+    background-color: #2a4d2b;
+}
+
+.calendar-days .selected {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* Estilos da Agenda */
+#agenda-container {
+    margin-top: 1.5em;
+    padding-top: 1em;
+    border-top: 1px solid #333;
+}
+
+#agenda-title {
+    font-weight: normal;
+    font-size: 1em;
+    color: #ccc;
+    margin: 0 0 1em 0;
+}
+
+#agenda-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.slot {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #eee;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.slot:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos da Barra Lateral Direita */
+.right-sidebar {
+    position: fixed;
+    top: 0; /* Alinha o container no topo da tela */
+    right: 0;
+    bottom: 0;
+    width: 240px; /* Largura da barra lateral */
+    background-color: #0a0a0a;
+    border-left: 1px solid #222;
+    padding: 1.5em 1em; /* Padding uniforme em todos os lados */
+    z-index: 110; /* Garante que o menu fique sobre o header (que tem z-index: 100) */
+}
+
+/* Estilos da Barra Lateral Esquerda (Galeria) */
+.left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    background-color: #0a0a0a;
+    border-right: 1px solid #222;
+    padding: 1.5em 1em;
+    overflow-y: auto; /* Permite rolar a galeria */
+    z-index: 110;
+}
+
+.side-menu h3 {
+    font-size: 1.2em;
+    color: #eee;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5em;
+    margin: 0 0 1em 0;
+    font-weight: normal;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.75em 0.5em;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.side-menu li a:hover {
+    background-color: #222;
+    color: #fff;
+}
